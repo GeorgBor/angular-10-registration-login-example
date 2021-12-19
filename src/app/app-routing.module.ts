@@ -10,7 +10,7 @@ const projectsModule = () => import('./projects/projects.module').then(m => m.Pr
 const contactsModule = () => import('./contacts/contacts.module').then(m => m.ContactsModule);
 
 const routes: Routes = [
-    { path: 'projects', loadChildren: projectsModule },
+    { path: 'projects', loadChildren: projectsModule, canActivate: [AuthGuard] },
     { path: 'contacts', loadChildren: contactsModule },
   //----------------------------------------
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
