@@ -6,7 +6,7 @@ import {FormGroup} from "@angular/forms";
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit{
 
   constructor() { }
 

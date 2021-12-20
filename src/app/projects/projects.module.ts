@@ -11,6 +11,9 @@ import {FormsModule} from "@angular/forms";
     ProjectsRoutingModule,
     FormsModule
   ],
-  declarations: [ProjectsComponent]
+  declarations: [
+    ProjectsComponent,
+
+  ]
 })
 export class ProjectsModule {}
