@@ -1,18 +1,36 @@
 body {
 
   padding: 20px;
-  background-color: aqua;
+  background-color: lightgray;
+  box-sizing: border-box;
 
 }
-
 mat-grid-tile {
-  position: center;
-  border: black;
-  background-color: black;
+
+}
+mat-grid-list {
+
+}
+.nav-item {
+
+}
+a {
+  color: chocolate;
 
 }
 article {
+  float: left;
 
-  position: relative;
+  padding: 40px;
+  margin: 10px;
+  background: blue;
+
+}
+section {
+  content: "";
+  display: table;
+  clear: both;
+  background: green;
+
 }
 
