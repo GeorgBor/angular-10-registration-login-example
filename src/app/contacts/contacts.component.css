@@ -1,9 +1,35 @@
 body {
 
-  margin: 10px;
-  background-color: green;
+  height: 100%;
+
 
 }
+articel {
+
+
+}
+.details {
+  text-align: center;
+  padding-top: 25%;
+  font-size: 40px;
+  font: bold;
+  color: white;
+}
+section {
+  background-image: url('./pictures/contactsImageLess.jpg');
+  height: 768px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+
+}
+div {
+  float: left;
+  margin: 20px;
+
+}
+
 
 
 

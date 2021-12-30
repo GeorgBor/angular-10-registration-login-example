@@ -13,6 +13,8 @@ const projectsChildrenDetailsModule = () => import('./projectsChildren-details/p
 const projectsEducationDetailsModule = () => import('./projectsEducation-details/projectsEducation-details.module').then(x => x.ProjectsEducationDetailsModule);
 const projectsHealthDetailsModule = () => import('./projectsHealth-details/projectsHealth-details.module').then(x => x.ProjectsHealthDetailsModule);
 const projectsToKnowDetailsModule = () => import('./projectsToKnow-details/projectsToKnow-details.module').then(x => x.ProjectsToKnowDetailsModule);
+const projectsEnvirementDetailsModule = () => import('./projectsEnvirement-details/projectsEnvirement-details.module').then(x => x.ProjectsEnvirementDetailsModule);
+const projectsDiversityDetailsModule = () => import('./projectsDiversity-details/projectsDiversity-details.module').then(x => x.ProjectsDiversityDetailsModule);
 
 const routes: Routes = [
   { path: '', component: ProjectsComponent, children: [
@@ -20,6 +22,8 @@ const routes: Routes = [
       { path: 'projects-details2', loadChildren: projectsEducationDetailsModule, canActivate: [AuthGuard] },
       { path: 'projects-details3', loadChildren: projectsHealthDetailsModule, canActivate: [AuthGuard] },
       { path: 'projects-details4', loadChildren: projectsToKnowDetailsModule, canActivate: [AuthGuard] },
+      { path: 'projects-details5', loadChildren: projectsEnvirementDetailsModule, canActivate: [AuthGuard] },
+      { path: 'projects-details6', loadChildren: projectsDiversityDetailsModule, canActivate: [AuthGuard] },
 
 
     ]
