@@ -1,15 +1,17 @@
 body {
 
   padding: 20px;
-  background-color: lightgray;
   box-sizing: border-box;
 
+}
+div {
+  background-color: lightgrey;
 }
 mat-grid-tile {
   float: left;
   padding: 20px;
   margin: 10px;
-  background: blue;
+  background: red;
   clear: both;
 
 
@@ -29,7 +31,7 @@ img {
 
 }
 a {
-  color: chocolate;
+  color: black;
   text-align: center;
 }
 
@@ -44,7 +46,7 @@ article {
 section {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
+  background-color:lightgrey;
   padding: 10px;
 
 }
