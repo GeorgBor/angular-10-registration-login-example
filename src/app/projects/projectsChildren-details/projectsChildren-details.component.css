@@ -14,3 +14,9 @@ div {
   text-align: center;
   background-color: #f5f5f5;
 }
+mat-tab-group {
+  background-color: green;
+}
+mat-tab {
+  text-align: center;
+}

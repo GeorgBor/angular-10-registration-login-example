@@ -41,9 +41,10 @@
   </article>
 
 </section>
-<h2>Haben Sie ihre #Herzensangelegenheit gefunden?</h2>
 
-<!--<mat-grid-list cols="4" rowHeight="100px">
+<h2>Haben Sie ihre #Herzensangelegenheit gefunden?</h2>
+<!--
+<mat-grid-list cols="4" rowHeight="100px">
   <mat-grid-tile
     *ngFor="let tile of tiles"
     [colspan]="tile.cols"
@@ -51,16 +52,17 @@
     [style.background]="tile.color"> Projekt: {{tile.text}}
     <img src="{{tile.picture}}">
     <a class="nav-item nav-link" routerLink="./projects-details{{tile.number}}" routerLinkActive="active">Projects Details {{tile.text}}</a>
-    <img src="https://media0.faz.net/ppmedia/aktuell/wissen/geist-soziales/3972138412/1.5810840/width610x580/kennen-alle-die-antwort-ja.jpg">
+
 
   </mat-grid-tile>
   <mat-grid-tile>
 
-    <button>Das ist Mat-Button-TEST</button>
+    <button (click)="toggleBackground()">Das ist Mat-Button-TEST</button>
     <img src="https://media0.faz.net/ppmedia/aktuell/wissen/geist-soziales/3972138412/1.5810840/width610x580/kennen-alle-die-antwort-ja.jpg">
 
   </mat-grid-tile>
-</mat-grid-list> -->
+</mat-grid-list>
+-->
 
 <!--<a class="nav-item nav-link" routerLink="./projectsChildren-details" routerLinkActive="active">Projects Details</a>
 -->
