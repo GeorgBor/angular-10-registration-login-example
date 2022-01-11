@@ -4,6 +4,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '@app/_services';
+import {MustMatch} from "../_helpers/must-match";
+
+
+
 
 @Component({ templateUrl: 'add-edit.component.html' })
 export class AddEditComponent implements OnInit {
@@ -24,9 +28,9 @@ export class AddEditComponent implements OnInit {
     ngOnInit() {
         this.id = this.route.snapshot.params['id'];
         this.isAddMode = !this.id;
-        
+
         // password not required in edit mode
-        const passwordValidators = [Validators.minLength(6)];
+        const passwordValidators = [Validators.minLength(6) ];
         if (this.isAddMode) {
             passwordValidators.push(Validators.required);
         }
@@ -35,7 +39,12 @@ export class AddEditComponent implements OnInit {
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             username: ['', Validators.required],
-            password: ['', passwordValidators]
+            email: ['', Validators.email],
+            password: ['', passwordValidators],
+            retypePassword: ['', passwordValidators]
+
+        }, {
+          validator: MustMatch('password', 'retypePassword')
         });
 
         if (!this.isAddMode) {
