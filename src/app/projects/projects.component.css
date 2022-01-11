@@ -56,3 +56,16 @@ h2 {
   text-align: center;
 }
 
+@media screen and (max-width: 960px) {
+
+  img {
+    display: none;
+    visibility: hidden;
+  }
+  a {
+    font-size: 15px;
+  }
+
+
+}
+

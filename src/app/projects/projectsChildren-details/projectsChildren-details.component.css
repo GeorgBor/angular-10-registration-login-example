@@ -1,7 +1,7 @@
 body {
 
   margin: 50px;
-  background-color: yellow;
+  background-color: #343A40;
 
 }
 button {
@@ -15,8 +15,13 @@ div {
   background-color: #f5f5f5;
 }
 mat-tab-group {
-  background-color: green;
+  background-color: #f5f5f5;
+  font-size: 30px;
 }
 mat-tab {
   text-align: center;
+
+}
+.mat-tab-label-content {
+  font-size: 20px;
 }
