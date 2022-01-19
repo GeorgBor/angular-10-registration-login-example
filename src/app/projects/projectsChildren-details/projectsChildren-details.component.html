@@ -13,27 +13,29 @@
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Project One" mat-align-tabs="center">Erstes Projekt: Weitere Projektdetails.....</mat-tab>
     <mat-tab label="Project Two">Zweites Projekt: Weitere Projektdetails.....</mat-tab>
-    <mat-tab label="Project three">Drittes Projekt: Weitere Projektdetails.....</mat-tab>
+    <mat-tab label="Project three">
 
+      <p>Drittes Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+
+    </mat-tab>
   </mat-tab-group>
 
-<!--
-  <ol>
-    <li>
-      <mat-form-field>
-        <mat-label>What's your name?</mat-label>
-        <input matInput [(ngModel)]="name">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-      You chose: <i>{{animal}}</i>
-    </li>
-  </ol>
 
-  -->
+
+  <div>
+
+    <button mat-stroked-button (click)="openSnackBar()"> Sent Message</button>
+  </div>
+
 
 </main>
 </body>

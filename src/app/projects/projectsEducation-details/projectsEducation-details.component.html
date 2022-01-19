@@ -11,6 +11,15 @@
 
  </div>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <input matInput value="Disco party!" #message>
+  </mat-form-field>
+
+
+  <button mat-stroked-button (click)="openSnackbar()">Sent Message</button>
+
+
 </main>
 </body>
 

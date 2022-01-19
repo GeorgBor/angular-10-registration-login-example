@@ -4,9 +4,6 @@ body {
   background-color: #343A40;
 
 }
-button {
-  position: center;
-}
 main {
 
 }
@@ -14,6 +11,15 @@ div {
   text-align: center;
   background-color: #f5f5f5;
 }
+div p {
+  text-align: left;
+}
+div button {
+  position: center;
+  background-color: green;
+}
+
+
 mat-tab-group {
   background-color: #f5f5f5;
   font-size: 30px;
@@ -25,3 +31,7 @@ mat-tab {
 .mat-tab-label-content {
   font-size: 20px;
 }
+
+
+
+

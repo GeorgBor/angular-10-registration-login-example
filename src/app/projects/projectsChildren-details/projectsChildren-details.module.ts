@@ -5,17 +5,22 @@ import {ProjectsChildrenDetailsComponent} from "./projectsChildren-details.compo
 import {ProjectsDetailsRoutingModule} from "./projectsChildren-details-routing.module";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+
 
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ProjectsDetailsRoutingModule,
-        MatFormFieldModule,
-        MatTabsModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ProjectsDetailsRoutingModule,
+    MatFormFieldModule,
+    MatTabsModule,
+    MatInputModule,
+    MatButtonModule
+  ],
   exports: [
     ProjectsChildrenDetailsComponent
   ],
