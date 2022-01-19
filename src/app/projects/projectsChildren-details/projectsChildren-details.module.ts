@@ -7,9 +7,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-
-
-
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   imports: [
@@ -19,10 +18,17 @@ import {MatButtonModule} from "@angular/material/button";
     MatFormFieldModule,
     MatTabsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    MatIconModule
+
+
   ],
   exports: [
-    ProjectsChildrenDetailsComponent
+    ProjectsChildrenDetailsComponent,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: [ProjectsChildrenDetailsComponent]
 })

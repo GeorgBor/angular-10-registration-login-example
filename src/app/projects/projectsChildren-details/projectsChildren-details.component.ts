@@ -8,9 +8,10 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 export class ProjectsChildrenDetailsComponent {
 
-  constructor() {  }
+  constructor(private matSnackBar: MatSnackBar) {  }
 
-  openSnackBar() {
+  openSnackBar(amount: string) {
+    this.matSnackBar.open("Danke für ihre Spende! "+amount, "Okay!");
 
   }
 

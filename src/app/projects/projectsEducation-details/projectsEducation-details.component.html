@@ -8,17 +8,55 @@
  <div>
    <h2>ProjectsEducationDetails</h2>
    <p>Das is jetzt mal ein Test Projekts Education Details!</p>
-
  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Message</mat-label>
-    <input matInput value="Disco party!" #message>
-  </mat-form-field>
+
+  <mat-tab-group mat-align-tabs="center">
+
+    <mat-tab label="Project One">
+      <p>Erstes Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Project Two">
+      <p>Zweites Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Project three">
+      <p>Drittes Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+    </mat-tab>
 
 
-  <button mat-stroked-button (click)="openSnackbar()">Sent Message</button>
+  </mat-tab-group>
 
+
+  <div>
+    <button mat-raised-button (click)="openSnackBar(amount.value)"> Sent Message</button>
+  </div>
 
 </main>
 </body>

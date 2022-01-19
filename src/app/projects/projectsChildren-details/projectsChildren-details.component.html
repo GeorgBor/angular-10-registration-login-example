@@ -11,11 +11,8 @@
   </div>
 
   <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Project One" mat-align-tabs="center">Erstes Projekt: Weitere Projektdetails.....</mat-tab>
-    <mat-tab label="Project Two">Zweites Projekt: Weitere Projektdetails.....</mat-tab>
-    <mat-tab label="Project three">
-
-      <p>Drittes Projekt: Weitere Projektdetails.....</p>
+    <mat-tab label="Project One">
+      <p>Erstes Projekt: Weitere Projektdetails.....</p>
       <div>
         <p>Welchen Betrag wollen Sie spenden?</p>
         <mat-form-field appearance="fill" floatLabel="always">
@@ -25,15 +22,42 @@
           <span matSuffix>.00</span>
         </mat-form-field>
       </div>
-
+    </mat-tab>
+    <mat-tab label="Project Two">
+      <p>Zweites Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Project three">
+      <p>Drittes Projekt: Weitere Projektdetails.....</p>
+      <div>
+        <p>Welchen Betrag wollen Sie spenden?</p>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" value="Sent Message" #amount>
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+        <!--
+        <mat-form-field appearance="fill">
+          <mat-label>Action</mat-label>
+          <input matInput value="Spent" #action>
+        </mat-form-field>
+        -->
+      </div>
     </mat-tab>
   </mat-tab-group>
 
 
-
   <div>
-
-    <button mat-stroked-button (click)="openSnackBar()"> Sent Message</button>
+    <button mat-raised-button (click)="openSnackBar(amount.value)"> Sent Message</button>
   </div>
 
 

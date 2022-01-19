@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 
 @Component({
@@ -9,9 +9,10 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class ProjectsEducationDetailsComponent{
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
-  openSnackbar(){
+  openSnackBar(amount: string){
+    this.snackBar.open("Danke für ihre Spende! "+amount, "Okay!");
 
   }
 

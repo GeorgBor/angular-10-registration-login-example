@@ -5,6 +5,10 @@ import {ProjectsEducationDetailsComponent} from "./projectsEducation-details.com
 import {ProjectsEducationDetailsRoutingModule} from "./projectsEducation-details-routing.module";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatButtonModule} from "@angular/material/button";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -13,10 +17,17 @@ import {MatInputModule} from "@angular/material/input";
     FormsModule,
     ProjectsEducationDetailsRoutingModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatIconModule
   ],
   exports: [
-    ProjectsEducationDetailsComponent
+    ProjectsEducationDetailsComponent,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: [ProjectsEducationDetailsComponent]
 })
