@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from "@angular/forms";
 import { ThemePalette } from '@angular/material/core';
 
+
+
+
+
 export interface Tile {
   color: string;
   cols: number;
@@ -18,10 +22,15 @@ export interface Tile {
 
 export class ProjectsComponent implements OnInit {
 
+  paymentHandler:any = null;
+
   constructor() { }
 
   ngOnInit(): void {
+    //this.invokeStripe();
   }
+
+
 
   validationMessages = {
     username: [
@@ -36,7 +45,7 @@ export class ProjectsComponent implements OnInit {
       {type: "required", message: "Please enter your password."},
       {type: "minlength", message: "The password must be at least 6 characters."}
     ]
-  }
+  };
   validationFormUser: FormGroup;
   loading: any;
 
@@ -53,6 +62,53 @@ export class ProjectsComponent implements OnInit {
   toggleBackground() {
     this.background = this.background ? undefined : 'primary';
   }
+
+  /*makePayment(amount) {
+    const paymentHandler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_51KL4GWIFktbt3BSCkzjjeL4QoVIkbIELydEVaYXH72ht3xIer8Mf9jEycdR86Ujtclg2XHEJisrqBCVkETFJL3eD00H2Kj2Esa',
+      locale: 'auto',
+      token: function (stripeToken: any) {
+        console.log(stripeToken)
+        alert('Stripe token generated!');
+      }
+    });
+
+    paymentHandler.open({
+      name: 'Positronx',
+      description: '3 widgets',
+      amount: amount * 100
+    });
+  }
+  invokeStripe() {
+    if(!window.document.getElementById('stripe-script')) {
+      const script = window.document.createElement("script");
+      script.id = "stripe-script";
+      script.type = "text/javascript";
+      script.src = "https://checkout.stripe.com/checkout.js";
+      script.onload = () => {
+        this.paymentHandler = (<any>window).StripeCheckout.configure({
+          key: 'pk_test_51KL4GWIFktbt3BSCkzjjeL4QoVIkbIELydEVaYXH72ht3xIer8Mf9jEycdR86Ujtclg2XHEJisrqBCVkETFJL3eD00H2Kj2Esa',
+          locale: 'auto',
+          token: function (stripeToken: any) {
+            console.log(stripeToken)
+            alert('Payment has been successfull!');
+          }
+        });
+      };
+
+      window.document.body.appendChild(script);
+    }
+  }*/
+
+
+  //------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 }
