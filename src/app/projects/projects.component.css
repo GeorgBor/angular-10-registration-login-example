@@ -56,7 +56,7 @@ h2 {
   text-align: center;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1350px) {
 
   img {
     display: none;
